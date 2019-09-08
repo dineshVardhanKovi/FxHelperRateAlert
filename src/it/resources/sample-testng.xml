@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="methods" verbose="2" thread-count="10" data-provider-thread-count="5">
+
+<listeners>
+<listener class-name="com.webmd.general.common.Listener"></listener>
+</listeners>
+
+	<test name="HeadLine-Desktop">
+	
+		<parameter name="browser" value="chromeheadless" />
+		<parameter name="breakPoint" value="4" />
+ 
+		<groups>
+			<run>
+				<include name="vc_smoke" />
+			</run>
+		</groups>
+
+
+		<packages>
+			<package name="com.webmd.*" />
+			<!-- <package name="com.google.*"/> -->
+
+		</packages>
+	</test>
+
+</suite> <!-- Suite -->

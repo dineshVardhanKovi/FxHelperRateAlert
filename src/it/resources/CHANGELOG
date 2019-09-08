@@ -1,0 +1,86 @@
+v1.6.1
+=======
+* Updated login auth services from iad1 to ma1
+
+v1.6
+=======
+* Updated email reports with execution link
+* Fixed minor bugs
+* Note: update config file with  >  smtp = mx00x-ops-23.portal.webmd.com
+
+v1.5.5-beta
+=======
+* login issue for qa environments
+
+v1.5.4-beta
+=======
+* Speed up execution in chrome
+* Added useragent in Grid for BP1 and BP2 
+* Fixed login issue 
+v1.5.3
+=======
+* Fixed login issue 
+
+v1.5.2
+=======
+* Pointed staging scripts to PROD Selenium nodes
+* Updated login method with authservice for qa environments
+* Removed sleep time in cal_galen method
+* Updated cookie handling for parallel execution
+* Add profiles into framework
+	* Note : create folder "profiles" in rool level
+	* Add files like 
+	** qa00-config.properties
+	** qa01-config.properties
+	** prod-config.properties
+
+v1.5.1
+=======
+* fixed type function for key board actions
+
+v1.5
+=======
+* Updated screenshot for galen validation
+* Added below new methods
+* apiCallGET()
+* apiCallPost()
+* apiExtractValue() -  method to fetch value from api response
+* getMednetCookie()
+* addCookieToBrowser()
+* getFlatFileContentAsString(String fileLocation)
+* Minor bug fixes
+
+v1.4
+=======
+* Minor bugs fixed
+* environment value can be used as PROD for production (or can leave blank)
+* Reading BrowserMob server ports range from config file when running through Selenium GRID
+* Added browserMobMobilePort in config file
+* Added proxy for calls tracking on mobile testing
+* Fixed browser launch for api testing while generating report
+* Fixed browsermobproxy issue in Jenkins
+
+*Note: Update config.properties file with latest to override default values
+
+v1.3
+=======
+* Added browsermob port range from 8001 to 8010 when scripts are running from grid/jenkins(auto port loading)
+* Updated chrome browser arguments to support linux OS
+* Added keywords
+	* toUTF8(String str)
+	* throwErrorOnTestFailure()
+* Updated below keywords to support UFT-8 text format
+	* isTextMatched(String text1, String text2, String locator)
+	* isTextContainsOnElement(By by, String expectedText)
+	* isTextPresentOnElement(By by, String expectedText)
+* Fixed below bugs
+	* Trying to launch browser second time if browser launch fails first attempt in getDriver()
+	* Updated getURL(String url) method to handle TimeoutException
+* Added Config.properties in it-common
+* Default Config.properties values can be overridden by placing Config.properties under resources
+* Added Extent-config.xml in it-common
+* Added log4j.properties in it-common
+* Moved logs to latest execution reports location 
+* Updated logs in step level execution
+* Added sample-testng.xml in it common
+* Note : Do not execute more than 10 threads parallely from grid
